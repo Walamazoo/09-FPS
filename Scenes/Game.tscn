@@ -1,14 +1,15 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Scenes/Game.gd" type="Script" id=1]
 [ext_resource path="res://Materials/moonless_golf_2k.hdr" type="Texture" id=2]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/shotgun.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scripts/Terrain.gd" type="Script" id=5]
-[ext_resource path="res://tree_default.tscn" type="PackedScene" id=6]
-[ext_resource path="res://cliffGrey.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/tree_default.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/cliffGrey.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Assets/crate.glb" type="PackedScene" id=8]
 [ext_resource path="res://Assets/key.glb" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Monster.tscn" type="PackedScene" id=10]
 
 [sub_resource type="PanoramaSky" id=1]
 panorama = ExtResource( 2 )
@@ -98,7 +99,7 @@ extents = Vector3( 0.25, 0.25, 0.25 )
 [sub_resource type="BoxShape" id=16]
 extents = Vector3( 0.08, 0.15, 0.3 )
 
-[sub_resource type="GIProbeData" id=18]
+[sub_resource type="GIProbeData" id=17]
 bounds = AABB( -100, -100, -100, 200, 200, 200 )
 cell_size = 1.5625
 to_cell_xform = Transform( 0.64, 0, 0, 0, 0.64, 0, 0, 0, 0.64, 64, 64, 64 )
@@ -267,6 +268,9 @@ shape = SubResource( 16 )
 
 [node name="Enemy" type="Spatial" parent="."]
 
+[node name="Monster" parent="Enemy" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20 )
+
 [node name="GIProbe" type="GIProbe" parent="."]
 extents = Vector3( 100, 100, 100 )
-data = SubResource( 18 )
+data = SubResource( 17 )

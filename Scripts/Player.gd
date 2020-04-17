@@ -9,7 +9,7 @@ var gravity = -9.8
 var speed = 8
 var mouse_sensitivity = 0.002
 var mouse_range = 1.2
-var jump = 10
+var jump = 5
 var jumping = false
 
 var health = 100

@@ -6,8 +6,8 @@
 radius = 0.2
 height = 1.0
 
-[node name="tree_pineSmall_square1" index="0" instance=ExtResource( 1 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+[node name="tree_pineSmall_square1" instance=ExtResource( 1 )]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
 
 [node name="tree_pineSmall_square1" parent="." index="0"]
 transform = Transform( 0.3025, 0, 0, 0, 0.3025, 0, 0, 0, 0.3025, 0, 0, 0 )
